@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ProjectPlantDatasetTrainingPyTorch", "ProjectPlantDatasetTrainingPyTorch.pyproj", "{850C1BDB-23C3-4A2D-AE58-7DD1ADF4725C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{850C1BDB-23C3-4A2D-AE58-7DD1ADF4725C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850C1BDB-23C3-4A2D-AE58-7DD1ADF4725C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BBFBF8A-D041-4A0D-BD19-E88AD770A3A6}
+	EndGlobalSection
+EndGlobal
