@@ -161,6 +161,54 @@ def train(num_epochs):
             saveModel()
             best_accuracy = accuracy
 
+
 # Testing the model on the test data
+import matplotlib.pyplot as plt
+import numpy as np
 
+# Fucntions to show images
+def imageShow(img):
+    img = img / 2 + 0.5
+    npimg = img.numpy()
+    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.show()
 
+# Fucntion to test the model with a batch of images and show the labels predictions
+def testBatch():
+    # Getting batch of images from the test DataLoader
+    images, labels = next(iter(test_loader))
+
+    # Show all images as one image grid
+    imageShow(torchvision.utils.make_grid(images))
+
+    #Show the real labels on the screen
+    print('Real lables: ', ' '.join('%5s' % train_set.classes[labels[j]]
+                                    for j in range(batch_size)))
+
+    # Checking if the model identifies the labels of those examples
+    outputs = model(images)
+
+    # Probability for every 10 labels. The highest probability should be correct label
+    _, predicted = torch.max(outputs, 1)
+
+    # Displaying the predicted labels on the screen to compare with the real ones
+    print('Predicted: ', ' '.join('&5s' %train_set.classes[predicted[j]]
+                                  for j in range(batch_size)))
+
+    # The main code to execute the whole thing
+    if __name__ == "__main__":
+
+        # Building the model
+        train(10)
+        print('Finished Training')
+
+        #Testing classes with good performance
+        testAccuracy()
+
+        # Building the created model and test the accuracy per label
+        model = Network()
+        path = "ProjectPlantDiseaseModel.pth"
+        model.load_state_dict(torch.load(path))
+
+        # Test with batch of images
+        testBatch()
