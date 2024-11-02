@@ -18,7 +18,7 @@ transformations = transforms.Compose([
     ])
 
 # Path to dataset directory
-dataset_dir = "C:\Users\harry\Downloads\Plant Village Extracted\Plant_leave_diseases_dataset_with_augmentation"
+dataset_dir = "dataset location"
 
 # Load the dataset
 train_set = ImageFolder(root=os.path.join(dataset_dir, "train"), transform=transformations)
